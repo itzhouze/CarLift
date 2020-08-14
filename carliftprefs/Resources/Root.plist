@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+    	<key>cell</key>
+    	<string>PSGroupCell</string>
+    	<key>headerCellClass</key>
+    	<string>HBImageTableCell</string>
+    	<key>height</key>
+    	<integer>209</integer>
+    	<key>icon</key>
+    	<string>header.png</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Your screen turns on with every movement in your cell phone holder? Use my Activator 'Activate' action to temporarily disable the raise to wake feature. For example, activate it when you're connected to your cars bluetooth. Use the 'Deactivate' activator action to reset the raise to wake settings to default. (For example, if you are no longer connected to your cars bluetooth.)</string>
+			<key>isStaticText</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.itzhouze.carliftprefs</string>
+			<key>key</key>
+			<string>isEnabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>PostNotification</key>
+			<string>com.itzhouze.carliftprefs/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+	  	</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>respringMethod</string>
+			<key>label</key>
+			<string>Respring</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<key>PSGroupCell</key>
+			<key>footerText</key>
+			<string>Made with 💖 by itzhouze</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>footerAlignment</key>
+			<real>1</real>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<key>PSGroupCell</key>
+			<key>footerText</key>
+			<string>CarLift v1.0.0</string>
+			<key>isStaticText</key>
+			<true/>
+			<key>footerAlignment</key>
+			<real>1</real>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>CarLift</string>
+</dict>
+</plist>
