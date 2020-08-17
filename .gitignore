@@ -80,3 +80,10 @@
 .theos/obj/arm64/Tweak.x.m
 .theos/obj/arm64e/Tweak.x.m
 .theos/_/Library/PreferenceBundles/CarLiftPrefs.bundle/GeneralSub.plist
+.theos/_/Library/Activator/Listeners/com.itzhouze.carlift.activate/icon-small.png
+.theos/_/Library/Activator/Listeners/com.itzhouze.carlift.activate/icon-small@2x.png
+.theos/_/Library/Activator/Listeners/com.itzhouze.carlift.activate/Info.plist
+.theos/_/Library/Activator/Listeners/com.itzhouze.carlift.deactivate/icon-small.png
+.theos/_/Library/Activator/Listeners/com.itzhouze.carlift.deactivate/icon-small@2x.png
+.theos/_/Library/Activator/Listeners/com.itzhouze.carlift.deactivate/Info.plist
+.theos/_/Library/PreferenceLoader/Preferences/CarLiftPrefs.plist
