@@ -77,3 +77,6 @@
 .theos/obj/debug/CarLiftPrefs.bundle/Root.plist
 .theos/packages/com.itzhouze.carlift-0.0.1
 .theos/packages/com.itzhouze.carlift-1.0.0
+.theos/obj/arm64/Tweak.x.m
+.theos/obj/arm64e/Tweak.x.m
+.theos/_/Library/PreferenceBundles/CarLiftPrefs.bundle/GeneralSub.plist
