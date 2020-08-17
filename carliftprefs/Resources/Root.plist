@@ -18,7 +18,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Your screen turns on with every movement in your cell phone holder? Use my Activator 'Activate' action to temporarily disable the raise to wake feature. For example, activate it when you're connected to your cars bluetooth. Use the 'Deactivate' activator action to reset the raise to wake settings to default. (For example, if you are no longer connected to your cars bluetooth.)</string>
+			<string>Your screen turns on with every movement or bumb in your cars cell phone holder? Not anymore! Use the new Activator actions to temporarily disable the raise to wake feature. For example, activate it when you're connected to your cars bluetooth. Use the 'Deactivate' activator action to reset the raise to wake settings to default. For example, if you're no longer connected to your cars bluetooth.</string>
 			<key>isStaticText</key>
 			<true/>
 		</dict>
@@ -50,6 +50,14 @@
 		</dict>
 		<dict>
 			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>CarLift on GitHub</string>
+			<key>action</key>
+			<string>openGithub</string>
+		</dict>
+		<dict>
+			<key>cell</key>
 			<key>PSGroupCell</key>
 			<key>footerText</key>
 			<string>Made with 💖 by itzhouze</string>
@@ -62,7 +70,7 @@
 			<key>cell</key>
 			<key>PSGroupCell</key>
 			<key>footerText</key>
-			<string>CarLift v1.0.0</string>
+			<string>CarLift v1.0.1</string>
 			<key>isStaticText</key>
 			<true/>
 			<key>footerAlignment</key>

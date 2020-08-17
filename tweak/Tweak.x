@@ -1,10 +1,9 @@
 #import <libactivator/libactivator.h>
 #import <Cephei/HBPreferences.h>
-#import <UIKit/UIKit.h>
 #import <RemoteLog.h>
 
-BOOL isEnabled = NO;
-BOOL activatorSwitchActivated = NO;
+static BOOL isEnabled = NO;
+static BOOL activatorSwitchActivated = NO;
 
 @interface ActivateNow : NSObject<LAListener> {}
 @end
@@ -13,7 +12,7 @@ BOOL activatorSwitchActivated = NO;
 -(void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
     @autoreleasepool {
       activatorSwitchActivated = YES;
-      RLog(@"CarLift - Activated!");
+      //RLog(@"CarLift - Activated!");
     }
 }
 
@@ -39,7 +38,7 @@ BOOL activatorSwitchActivated = NO;
 
 -(void)activator:(LAActivator *)activator receiveEvent:(LAEvent *)event {
     @autoreleasepool {
-      RLog(@"CarLift - DEACTIVATED!");
+      //RLog(@"CarLift - DEACTIVATED!");
       activatorSwitchActivated = NO;
     }
 }
@@ -63,15 +62,15 @@ BOOL activatorSwitchActivated = NO;
 
 %hook SBLiftToWakeManager
 -(void)liftToWakeController:(id)arg1 didObserveTransition:(long long)arg2 deviceOrientation:(long long)arg3  {
-  if (!activatorSwitchActivated)
+  if (isEnabled && activatorSwitchActivated)
   {
-    %orig;
+    return;
   }
+
+  %orig;
 }
 %end
 
-// we are accessing Cephei from a tweak and it likes to throw hands if we do this so we
-// set this boolean to true and it stops it. this is from the offical cephei docs
 // Thanks to https://github.com/KodeyThomas
 %hook HBForceCepheiPrefs
 + (BOOL)forceCepheiPrefsWhichIReallyNeedToAccessAndIKnowWhatImDoingISwear {
@@ -84,4 +83,11 @@ BOOL activatorSwitchActivated = NO;
 
 	// MAIN
   [preferences registerBool:&isEnabled default:YES forKey:@"isEnabled"];
+
+  if (!isEnabled)
+  {
+    return;
+  }
+
+  %init;
 }

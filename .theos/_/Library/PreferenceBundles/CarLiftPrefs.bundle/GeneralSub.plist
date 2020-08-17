@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>BLUETOOTH SETTINGS</string>
+			<key>footerText</key>
+			<string>Play the specified sound when an alarm occurs.</string>
+			<key>isStaticText</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.itzhouze.carliftprefs</string>
+			<key>key</key>
+			<string>GeneralSub_PlayAlarmSoundEnabled</string>
+			<key>label</key>
+			<string>Play alarm sound</string>
+			<key>PostNotification</key>
+			<string>com.itzhouze.carliftprefs/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>defaults</key>
+			<string>com.itzhouze.carliftprefs</string>
+			<key>label</key>
+			<string>Choose alarm sound</string>
+			<key>key</key>
+			<string>GeneralSub_AlarmSound</string>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<key>validTitles</key>
+			<array>
+				<string>ALARM</string>
+				<string>BEEP</string>
+			</array>
+			<key>PostNotification</key>
+			<string>com.itzhouze.carliftprefs/ReloadPrefs</string>
+		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>HAPTIC FEEDBACK</string>
+			<key>footerText</key>
+			<string>Use the Taptic Engine to vibrate in the specified strength when an alarm occurs.</string>
+			<key>isStaticText</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.itzhouze.carliftprefs</string>
+			<key>key</key>
+			<string>GeneralSub_HapticFeedbackEnabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>PostNotification</key>
+			<string>com.itzhouze.carliftprefs/ReloadPrefs</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSegmentCell</string>
+			<key>default</key>
+			<string>3</string>
+			<key>defaults</key>
+			<string>com.itzhouze.carliftprefs</string>
+			<key>key</key>
+			<string>GeneralSub_HapicFeedbackStrength</string>
+			<key>validValues</key>
+			<array>
+				<string>0</string>
+				<string>1</string>
+				<string>2</string>
+			</array>
+			<key>validTitles</key>
+			<array>
+				<string>Light</string>
+				<string>Medium</string>
+				<string>Heavy</string>
+			</array>
+			<key>alignment</key>
+			<string>0</string>
+			<key>PostNotification</key>
+			<string>com.itzhouze.carliftprefs/ReloadPrefs</string>
+		</dict>	
+	</array>
+	<key>title</key>
+	<string>TheftSecure</string>
+</dict>
+</plist>
